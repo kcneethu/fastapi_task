@@ -1,0 +1,6 @@
+pip install python-jose[cryptography]
+pip install jwt
+pip install passlib
+pip install Pillow
+pip install python-multipart
+pip install bcrypt
