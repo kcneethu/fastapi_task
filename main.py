@@ -1,3 +1,4 @@
+# ### Import Modules
 import logging
 import random
 import string
@@ -6,7 +7,6 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request, File, Uplo
 from fastapi.security import  OAuth2PasswordRequestForm
 from fastapi.responses import FileResponse
 from datetime import datetime, timedelta
-
 from config import *
 from utility import *
 from auth.auth import *
@@ -21,6 +21,7 @@ logging.basicConfig(filename="logs/test.log", format='format=%(asctime)s logleve
 # Creating an object
 logger = logging.getLogger() 
 
+# API loggin
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     idem = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
